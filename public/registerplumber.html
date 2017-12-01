@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Book a Plumber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Plumber-Link</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <h1>Welcome To Plumber-Link</h1>
+    <h3>Please provide us with the following information so that you can be booked.</h3>
+
+    <span>Name:<input type="text" id="name" name="name" value=""></span>
+    <span>Email:<input type="email" id="email" name="email" value=""></span>
+    <span>Cell_no:<input type="number" id="cell_no" name="cell_no" value=""></span>
+
+    <h3>Choose a day and shift(s) you are available to work on</h3>
+    <input type="radio" class="day" name="days" value="Monday">Monday</input>
+    <input type="radio" class="day" name="days" value="Tuesday">Tuesday</input>
+    <input type="radio" class="day" name="days" value="Wednesday">Wednesday</input>
+    <input type="radio" class="day" name="days" value="Thursday">Thursday</input>
+    <input type="radio" class="day" name="days" value="Friday">Friday</input>
+    <input type="radio" class="day" name="days" value="Saturday">Saturday</input>
+    <input type="radio" class="day" name="days" value="Sunday">Sunday</input>
+    <br>
+    <br>
+    <input type="checkbox" class="shift" name="shifts" value="Morning">Morning</input>
+    <input type="checkbox" class="shift" name="shifts" value="Midday">Midday</input>
+    <input type="checkbox" class="shift" name="shifts" value="Evening">Evening</input>
+    <br>
+    <br>
+    <button type="button" class="sumbitBtn" name="submit">SUBMIT</button>
+
+
+      <script src="plumbers.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "plumbers",
+  "version": "1.0.0",
+  "description": "*",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "^4.11.5"
+  }
+}
