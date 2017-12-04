@@ -10,6 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="plumbers.css">
 </head>
 
 <body>
@@ -20,17 +22,70 @@
       </div>
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
+        <li class="search">
+          <a href="javascript:void(0)" class="dropbtn">Search</a>
+          <div class="dropdown-content">
+            <input class="searchedPlumber" type="text" name="" placeholder="enter day or slot">
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
-  <script id="myTemplate" type="text/handlebars-x">
-  {{#each data}} {{this}} {{/each}}
-  </script>
 
-  
-  <div class="outPut">
+  <div class="template">
+    <script id="myTemplate" type="text/handlebars-x">
+      <ul>
+        {{#each data}}
+        <li>Name: {{this.name}}</li>
+        <li>Email: {{this.email}}</li>
+        <li>Cell_no: {{this.cell_no}}</li>
+        <li>Day: {{this.day}}</li>
+        <li>Slot: {{this.shift}}</li>
+        <li>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Book</button>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
 
-  </div
+  </div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="employeeName">Name</label>
+              <input type="text" class="form-control" id="employerName" aria-describedby="nameHelp" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="employeeEmail">Email address</label>
+              <input type="email" class="form-control" id="employerEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="jobDesciption">Job Description</label>
+              <input type="text" class="form-control" id="jobDesciption" aria-describedby="emailHelp" placeholder="Enter job description">
+              <small id="emailHelp" class="form-text text-muted">what will the plumber be working on.</small>
+            </div>
+            <button type="submit" class="submitAbook">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
   <script src="plumbers.js" charset="utf-8"></script>
 </body>
 
